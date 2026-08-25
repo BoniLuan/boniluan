@@ -10,3 +10,4 @@ letsencrypt/
 certbot-webroot/
 .idea/
 .vscode/
+/profile-1x1-linkedin.png
