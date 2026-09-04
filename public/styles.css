@@ -137,6 +137,7 @@ h1 em, h2 em { color: transparent; font-style: italic; -webkit-text-stroke: 1px 
 .skills li:hover { color: var(--accent); border-color: rgba(200,255,98,.3); background: var(--accent-soft); }
 
 .work { align-items: start; }
+.project-list { display: grid; gap: clamp(24px, 3vw, 42px); }
 .project { display: block; overflow: hidden; border: 1px solid var(--line); color: var(--ink); background: linear-gradient(135deg, rgba(200,255,98,.075), transparent 55%), var(--panel); text-decoration: none; transition: border-color .3s, transform .3s, box-shadow .3s; }
 .project:hover { border-color: rgba(200,255,98,.4); transform: translateY(-6px); box-shadow: 0 35px 100px rgba(0,0,0,.3); }
 .project-topline { display: flex; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid var(--line); color: var(--muted); font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .1em; }
