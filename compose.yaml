@@ -13,6 +13,7 @@ services:
     volumes:
       - letsencrypt:/etc/letsencrypt:ro
       - certbot-webroot:/var/www/certbot:ro
+      - ${VIGIL_CONFIG_DIR:-/home/luan/.config/vigil}/htpasswd:/etc/nginx/.htpasswd-vigil:ro
     networks:
       - default
       - web-proxy
