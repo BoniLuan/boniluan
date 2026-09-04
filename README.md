@@ -7,6 +7,7 @@
 <p align="center">
   <a href="https://boniluan.com"><strong>Website</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://finpulse.boniluan.com"><strong>FinPulse</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://vigil.boniluan.com"><strong>Vigil</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/boniluan"><strong>LinkedIn</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="mailto:bonifacio.luan.10@gmail.com"><strong>Email</strong></a>
 </p>
@@ -33,7 +34,9 @@ growing_toward      →  cloud platforms, CI/CD, observability, distributed syst
 
 I like following a problem beyond the endpoint: from domain rules and data integrity to containers, routing, certificates, logs, and the behavior users actually experience.
 
-## Featured work — FinPulse
+## Featured work
+
+### FinPulse
 
 > A financial assistant that turns Brazilian Central Bank data and backend calculations into useful insights, alerts, and AI-generated explanations.
 
@@ -51,6 +54,24 @@ FinPulse is where I put architecture into practice: authentication, rate limitin
   <a href="https://github.com/BoniLuan/finpulse"><strong>Explore the source ↗</strong></a>
 </p>
 
+### Vigil
+
+> A self-hosted monitoring and observability platform that runs secure HTTP checks and turns durable execution history into operational insight.
+
+```text
+scheduled checks  →  workers  →  PostgreSQL history
+       ↓                            ↓
+health & latency  ←  metrics  ←  API and operator UI
+```
+
+Vigil is built with Go and PostgreSQL as a production-oriented modular monolith. It explores durable scheduling, concurrent workers, safe outbound HTTP, health and readiness checks, metrics, container hardening, and single-VPS operations with Prometheus and Grafana.
+
+<p>
+  <a href="https://vigil.boniluan.com"><strong>Open the live project ↗</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/BoniLuan/vigil"><strong>Explore the source ↗</strong></a>
+</p>
+
 ## How I work
 
 - **Understand before building.** Start with the domain, constraints, and real user need.
@@ -62,7 +83,7 @@ FinPulse is where I put architecture into practice: authentication, rate limitin
 
 This repository has two jobs: its `README.md` is the introduction shown on my GitHub profile, and its application files power [boniluan.com](https://boniluan.com).
 
-The website uses semantic HTML and CSS served by Nginx on Alpine Linux. Docker Compose also provides Certbot renewal and reverse-proxy routing to FinPulse. To run it in its production-style setup:
+The website uses semantic HTML and CSS served by Nginx on Alpine Linux. Docker Compose also provides Certbot renewal and reverse-proxy routing to FinPulse and Vigil. To run it in its production-style setup:
 
 ```bash
 docker network create web-proxy
