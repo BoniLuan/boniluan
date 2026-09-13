@@ -8,6 +8,7 @@
   <a href="https://boniluan.com"><strong>Website</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://finpulse.boniluan.com"><strong>FinPulse</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://vigil.boniluan.com"><strong>Vigil</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://relay.boniluan.com"><strong>Relay</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/boniluan"><strong>LinkedIn</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="mailto:bonifacio.luan.10@gmail.com"><strong>Email</strong></a>
 </p>
@@ -72,6 +73,26 @@ Vigil is built with Go and PostgreSQL as a production-oriented modular monolith.
   <a href="https://github.com/BoniLuan/vigil"><strong>Explore the source ↗</strong></a>
 </p>
 
+### Relay
+
+> A webhook delivery service that accepts authenticated events, persists them before acknowledgment, and asynchronously delivers signed HTTPS requests with bounded retries.
+
+```text
+authenticated events  →  PostgreSQL  →  delivery worker
+                             ↑               ↓
+                     attempt history  ←  signed HTTPS webhooks
+```
+
+Relay is built with Go and PostgreSQL in one repository, with separate API and worker processes. It explores atomic ingestion, client-scoped idempotency, durable leases, encrypted signing secrets, DNS-pinned HTTPS, and crash recovery. Delivery follows at-least-once semantics: retries have a persisted budget, and receivers must deduplicate using a stable event ID.
+
+The public site explains the architecture and illustrates delivery outcomes; the backend API remains private. Owner-facing delivery history and controlled replay are planned.
+
+<p>
+  <a href="https://relay.boniluan.com"><strong>Open the project site ↗</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/BoniLuan/relay"><strong>Explore the source ↗</strong></a>
+</p>
+
 ## How I work
 
 - **Understand before building.** Start with the domain, constraints, and real user need.
@@ -83,7 +104,7 @@ Vigil is built with Go and PostgreSQL as a production-oriented modular monolith.
 
 This repository has two jobs: its `README.md` is the introduction shown on my GitHub profile, and its application files power [boniluan.com](https://boniluan.com).
 
-The website uses semantic HTML and CSS served by Nginx on Alpine Linux. Docker Compose also provides Certbot renewal and reverse-proxy routing to FinPulse and Vigil. To run it in its production-style setup:
+The website uses semantic HTML and CSS served by Nginx on Alpine Linux. Docker Compose also provides Certbot renewal and reverse-proxy routing to FinPulse and Vigil, plus the static Relay project site. To run it in its production-style setup:
 
 ```bash
 docker network create web-proxy
