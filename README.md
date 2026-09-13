@@ -100,3 +100,12 @@ TLS certificates and private keys are managed through Docker volumes and are nev
   <sub>Backend · APIs · Payments · Infrastructure</sub><br>
   <sub>Built with care in Brazil.</sub>
 </p>
+
+## Relay project page
+
+The edge also serves `https://relay.boniluan.com` using `nginx/relay.conf` and a
+read-only `../relay/site` bind. Keep the sibling Relay checkout available before
+starting the web service. This is a static institutional site; no Relay API is
+proxied. It uses its own `relay.boniluan.com` certificate in the existing Certbot
+volume and renewal loop. Deployment checks and rollback are documented in
+`../relay/docs/SITE.md`. Other virtual hosts retain their existing routing and TLS.
