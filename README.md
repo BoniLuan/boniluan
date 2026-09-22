@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="https://boniluan.com"><strong>Website</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://lume.boniluan.com"><strong>Lume</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://finpulse.boniluan.com"><strong>FinPulse</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://vigil.boniluan.com"><strong>Vigil</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://relay.boniluan.com"><strong>Relay</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
@@ -36,6 +37,24 @@ growing_toward      →  cloud platforms, CI/CD, observability, distributed syst
 I like following a problem beyond the endpoint: from domain rules and data integrity to containers, routing, certificates, logs, and the behavior users actually experience.
 
 ## Featured work
+
+### Lume
+
+> A personal-finance platform that makes spending, budgets, and account balances easier to understand and reconcile.
+
+```text
+responsive React client  →  versioned FastAPI  →  MariaDB
+           ↓                     ↓
+quick entry + imports     reports + budget checks
+```
+
+Lume is an API-first modular monolith built with Python, FastAPI, SQLAlchemy, MariaDB, React, and TypeScript. It includes secure sessions, user-owned financial data, reviewed CSV/OFX imports, spending insights, account reconciliation, automated tests, and production Docker deployment.
+
+<p>
+  <a href="https://lume.boniluan.com"><strong>Open the live application ↗</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/BoniLuan/lume"><strong>Explore the source ↗</strong></a>
+</p>
 
 ### FinPulse
 
